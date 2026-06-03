@@ -190,6 +190,7 @@ require("lazy").setup({
 					"markdown_inline",
 					"go",
 					"css",
+					"tailwindcss",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
@@ -225,7 +226,7 @@ require("lazy").setup({
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "ts_ls", "lua_ls", "pyright", "yamlls", "gopls", "cssls" },
+				ensure_installed = { "ts_ls", "lua_ls", "pyright", "yamlls", "gopls", "cssls", "tailwindcss" },
 				automatic_enable = true,
 			})
 		end,
@@ -425,6 +426,7 @@ vim.lsp.enable({
 	"gopls",
 	"yamlls",
 	"cssls",
+	"tailwindcss",
 })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -463,5 +465,9 @@ vim.lsp.config("yamlls", {
 })
 
 vim.lsp.config("cssls", {
+	capabilities = capabilities,
+})
+
+vim.lsp.config("tailwindcss", {
 	capabilities = capabilities,
 })
