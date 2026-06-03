@@ -417,6 +417,15 @@ require("lazy").setup({
 			end)
 		end,
 	},
+
+	-- auto closing/renaming html tags
+
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
 })
 
 vim.lsp.enable({
