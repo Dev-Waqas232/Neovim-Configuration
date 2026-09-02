@@ -86,11 +86,11 @@ require("lazy").setup({
 
 	-- Colorscheme
 	{
-		"folke/tokyonight.nvim",
-		name = "tokyonight",
+		"embark-theme/vim",
+		name = "embark",
 		priority = 1000,
 		config = function()
-			vim.cmd("colorscheme tokyonight-night")
+			vim.cmd("colorscheme embark")
 			vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 			vim.cmd("highlight NormalNC guibg=NONE ctermbg=NONE")
 			vim.cmd("highlight SignColumn guibg=NONE")
@@ -242,7 +242,7 @@ require("lazy").setup({
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "tokyonight-night",
+					theme = "embark",
 					globalstatus = true,
 					component_separators = { left = "|", right = "|" },
 					section_separators = { left = "", right = "" },
